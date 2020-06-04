@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="gamegrid.css">
+    </head>
+    <title>
+        <head>Blackjack</head>
+    </title>
+
+    <body>
+        <div id='game-table'>
+            <div>
+                <h1>Dealer's Cards</h1>
+                <div class='card-container' id="dealer-cards-containers">
+                    <!-- Generated from Javascript  -->
+                </div>
+                <h1>Player's Cards</h1>
+                <div class='card-container' id="player-cards-containers">
+                    <!-- Table Generated from Javascript -->
+                </div>
+            </div> 
+        </div>
+
+        <table id="player-data-container">
+            <tr>
+                <td class="data-container-td">
+                    <div id="game-controls">
+                        <button id='hit-button'>Hit</button>
+                        <div id='bet-container'>
+                            <input id='bet-input' placeholder="Enter Bet (Min. is 50)"></input>
+                            <button id='bet-submit-button'>Submit Bet</button>
+                        </div>
+                        <button id='end-turn-button'>End Turn</button>
+                        <button id='start-new-round'>Start New Round</button>
+                    </div>
+                </td>
+                <td class="data-container-td">
+                    <div id="game-response-banner">
+                        <p></p>
+                    </div>
+                </td>
+                <td class="data-container-td">
+                    <div id='player-info-container'>
+                        <!-- This is a div containing the loaded player information -->
+                        <table>
+                            <tr>
+                                <td class='player-info-header'>Player Name:</td>
+                                <td class='player-info-data' id='player-name-info'>Carson</td>
+                                <td class='player-info-seperator'></td>
+                                <td class='player-info-header'>Current Stack:</td>
+                                <td class='player-info-data' id='player-stack-info'>1000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <p id='view-table-pot'></p>
+            <button id='help-video-button'>How to Play?</button>
+            <button id='help-close-button'>Close Help</button>
+        </div>
+        <div id='help-video-container'>
+            <video>
+                <source src="How to Play Blackjack Easy Blackjack Rules CasinoTop10.mp4" type="video/mp4">
+            </video>
+        </div>
+    </body>
+
+    <script src="./scripts/model.js"></script>
+    <script src="./scripts/controller.js"></script>
+    <script src="./scripts/view.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Game Description</h1>
+        <!-- Login Section -->
+        <div id="loginContainer">
+            <h3>Login Here</h3>
+            <input placeholder="Username" id="usernameInput"></input>
+            <input placeholder="Password" type="password" id="passwordInput"></input>
+            <button id="submitButton">Submit</button>
+
+            <div id="loginMessageBoard"></div>
+        </div>
+
+        <!-- Assignment 3 Software Design -->
+        <h2>Preliminary Software Design</h2>
+        <h3>Model</h3>
+        <h5>Card Class</h5>
+        <p>A card class will be instantiated with the following arguments: SUIT, RANK, VALUE. The suit will contain a string with the type of suit, the rank will contain a numerical value assigned to the face value of the card (ex: Jack = 11, 2 = 2, etc). The value of the card will be equivalent to the value in the game, 1-11, face cards = 10 and ace = 1 or 11.</p>
+        <p>Card Object Example: {suit: “hearts”, rank: 12 (Queen), value: 10}</p>
+
+        <h5>Player Class</h5>
+        <p>A player class will hold he following arguments: PLAYER ID, NAME, HAND, CHIPS. The player id will be used to identify a player in the background process while the name will be used for the purposes of user identification. The hand will contain the cards held by the player and the chips equal to the number of chips currently held by the player.</p>
+        <p>Player Object Example: {playerId: 1, name: “John Doe”, hand: [{card object}, {card object}, etc], chips = 500}</p>
+
+        <h5>Table Class</h5>
+        <p>The table class will manage much of the game, it will hold discarded cards, the deck, etc. The table class will hold the following information: DISCARD_PILE, PLAY_DECK, POT. The discard_pile will hold an array of discarded card objects, the play deck will hold cards that can still be used, the pot will total chips used in betting to be allotted to the winner at the end.</p>
+        <p>Table Object Example: {discard_pile: [{card object}, {card object}, etc], play_deck: [{card object}, {card object}, etc], pot = 1000}</p>
+
+        <h5>Functions/Methods</h5>
+        <ul>
+            <li>cardFactory() – Generates the initial unshuffled deck of card objects to be used at the beginning of the game.</li>
+            <li>shuffleDeck() – Shuffles the cards and can be used at the end of the round to reshuffle the remaining cards in the playing deck.</li>
+            <li>deal() – Plays a card to a player from the play deck</li>
+            <li>bet() – A player can specify the amount desired to bet during a round</li>
+            <li>hit() – Gives a player a new card</li>
+            <li>pass() – finishes the turn for the player</li>
+            <li>endOfRound() – manages the game functions at the end of the round, discards all cards in play.</li>
+        </ul>
+        
+        <h3>Project Game Description</h3>
+        <p>The game I will be designing, and implementing is Blackjack. The game is played with a deck of cards. Players can place bets prior to being dealt cards. Each player, including the dealer receive 2 cards. Each card is valued at the number assigned to the card, if it is a face card, it is assigned the value 10. Ace is either counted as 11 or 1 depending on the players choice. The goal of the game is to get as close to 21 as possible without going over. If the player or dealer go over, it is called a bust. If the player is closer to 21 than the dealer, the player wins 1:1 the amount they bet. Otherwise, if the dealer wins, the player will lose the amount they bet. </p>
+
+        <h3>Game Grid</h3>
+        <p>The game state below is what I have currently coded. As you can see the HTML is in a table arrangement per assingment specifics. Using styling sheets I hid the borders and adjusted the styling of the page to make it appear like it does. </p>
+        <p>Based on the JSON response of the suit and rank , the img src will retrieve the appropriate image by applying the JSON of those two cards. The card objects for both the dealer and the player will hold the information for the cards. The player’s cards will appear upright while the dealer will appear face down until the end of the game. </p>
+
+        <table id="game_grid_images">
+            <tr>
+                <td><img src="Images/Blackjack Loaded.PNG" /></td>
+                <td><img src="Images/HTML Table Code.PNG" /></td>
+            </tr>
+        </table>
+
+        <h3>Game State</h3>
+        <table id="game_state_table">
+            <tr>
+                <td><img src="Images/Blackjack JSON template.PNG" /></td>
+            </tr>
+        </table>
+        <a href="https://www.pagat.com/banking/blackjack.html" target="_blank">Click Here for more information on Blackjack Rules</a>
+        <a href="gamegrid.html">Click here to play the game</a>
+
+        <script src="./scripts/login.js"></script>
+    </body>
+</html>

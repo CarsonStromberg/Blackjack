@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+#game_grid_images {
+    border: 2px solid black;
+}
+#game_grid_images img {
+    height: 400px;
+}
+
+#game_state_table {
+    border: 2px solid black;
+}
+#game_state_table img {
+    height: 400px;
+}
+
+/* Login Board --------------------- */
+#loginContainer {
+    text-align: center;
+    margin: 0 auto;
+}

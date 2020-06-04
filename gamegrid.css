@@ -1,0 +1,94 @@
+/* General Styling */
+body {
+    background: #2c3e50;
+}
+
+/* Game Table Styling */
+#game-table {
+    margin: 0 auto;
+    width: 800px;
+}
+.card-container {
+    background: #34495e;
+    height: 200px;
+    margin-bottom: 50px;
+}
+.card-container table {
+    height: 200px;
+    width: 800px;
+}
+.card-container td {
+    text-align: center;
+    width: 75px;
+    height: 100px;
+}
+.card-container img {
+    height: 100px;
+    width: 75px;
+    border: 2px solid black;
+}
+/* Game Controls Styling */
+#game-response-banner {
+    height: 30px;
+    color: white;
+    font-size: 20px;
+}
+#game-response-banner p {
+    color: white;
+    line-height: 30px;
+}
+
+/* Game Controls Styling */
+#hit-button {
+    display: none;
+}
+#end-turn-button {
+    display: none;
+}
+#end-round-button {
+    display: none;
+}
+#start-new-round {
+    display: none;
+}
+
+/* Player Info Styling */
+#player-data-container {
+    table-layout: fixed;
+    width: 100%;
+}
+#player-data-container .data-container-td {
+    vertical-align: middle;
+    width: 33%;
+    text-align: center;
+}
+#player-info-container td {
+    color: white;
+    font-size: 20px;
+}
+.player-info-seperator {
+    width: 20px;
+}
+#view-table-pot {
+    color: white;
+}
+#help-video-button {
+    float: right;
+}
+#help-close-button {
+    float: right;
+    display: none;
+}
+#help-video-container {
+    border: 2px solid white;
+    position: absolute;
+    background: white;
+    display: none;
+    margin-left: -375px;
+    top: 50;
+    left: 50%;
+}
+#help-video-container video {
+    width: 750px;
+}
+
